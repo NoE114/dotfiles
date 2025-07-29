@@ -1,0 +1,146 @@
+/* Hatsune Miku Colors */
+@define-color miku-cyan #00FFFF;
+@define-color miku-pink #FF69B4;
+@define-color miku-green #39FF14;
+@define-color miku-dark-bg rgba(20, 30, 50, 0.8);
+
+@define-color bar-bg rgba(20, 30, 50, 0);
+@define-color main-bg @miku-dark-bg;
+@define-color main-fg @miku-cyan;
+@define-color wb-act-bg @miku-pink;
+@define-color wb-act-fg rgba(255, 255, 255, 0.9);
+@define-color wb-hvr-bg @miku-green;
+@define-color wb-hvr-fg rgba(255, 255, 255, 0.8);
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: @bar-bg;
+    border-radius: 15px;
+}
+
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+#workspaces,
+#taskbar {
+padding: 0px;
+}
+
+#workspaces button {
+box-shadow: none;
+text-shadow: none;
+padding: 0px;
+border-radius: 9px;
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 0px;
+padding-left: 3px;
+padding-right: 3px;
+margin-right: 0px;
+color: @main-fg;
+background: rgba(0, 255, 255, 0.1);
+}
+
+#workspaces button.active {
+background: @wb-act-bg;
+color: @wb-act-fg;
+margin-left: 3px;
+padding-left: 12px;
+padding-right: 12px;
+margin-right: 3px;
+transition: all 0.4s ease;
+}
+
+#workspaces button:hover {
+background: @wb-hvr-bg;
+color: @wb-hvr-fg;
+transition: all 0.3s ease;
+}
+
+#taskbar button {
+box-shadow: none;
+text-shadow: none;
+padding: 0px;
+border-radius: 9px;
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 0px;
+padding-left: 3px;
+padding-right: 3px;
+margin-right: 0px;
+color: @main-fg;
+background: rgba(0, 255, 255, 0.05);
+}
+
+#taskbar button.active {
+background: @wb-act-bg;
+color: @wb-act-fg;
+margin-left: 3px;
+padding-left: 12px;
+padding-right: 12px;
+margin-right: 3px;
+transition: all 0.4s ease;
+}
+
+#taskbar button:hover {
+background: @wb-hvr-bg;
+color: @wb-hvr-fg;
+transition: all 0.3s ease;
+}
+
+#tray,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#battery,
+#network,
+#bluetooth,
+#clock,
+#idle_inhibitor {
+background: @main-bg;
+color: @main-fg;
+padding: 0px 10px;
+margin: 3px;
+border-radius: 9px;
+border: 1px solid @miku-cyan;
+}
+
+#clock {
+background: @miku-pink;
+color: white;
+font-weight: bold;
+}
+
+#battery.critical {
+background: @miku-green;
+color: black;
+}
+
+#battery.warning {
+background: rgba(255, 105, 180, 0.8);
+color: white;
+}
+
+#custom-l_end,
+#custom-r_end {
+color: @miku-cyan;
+background: transparent;
+font-size: 16px;
+}
+
+#custom-padd {
+padding: 0 5px;
+}

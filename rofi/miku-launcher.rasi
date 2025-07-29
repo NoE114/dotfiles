@@ -1,0 +1,18 @@
+@import "miku-theme.rasi"
+
+window {
+    width: 400px;
+    height: 500px;
+}
+
+listview {
+    lines: 10;
+    columns: 1;
+}
+
+element selected {
+    background-color: @miku-teal;
+    text-color: @miku-black;
+    border: 2px;
+    border-color: @miku-accent;
+}

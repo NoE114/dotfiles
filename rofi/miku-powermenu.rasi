@@ -1,0 +1,24 @@
+@import "miku-theme.rasi"
+
+window {
+    width: 300px;
+    height: 200px;
+}
+
+listview {
+    lines: 1;
+    columns: 4;
+}
+
+element {
+    padding: 20px;
+    border-radius: 50%;
+    text-color: @miku-teal;
+    font: "JetBrains Mono Nerd Font 16";
+}
+
+element selected {
+    background-color: @miku-pink;
+    text-color: @miku-white;
+    transform: scale(1.1);
+}
